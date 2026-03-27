@@ -18,10 +18,13 @@ export class Unit {
   targetPos?: Phaser.Math.Vector2;
   attackCooldown = 0;
 
+  readonly baseCooldown: number;
+
   constructor(scene: Phaser.Scene, x: number, y: number, stats: CharacterMaster, team: TeamKind) {
     this.team = team;
     this.stats = stats;
     this.hp = stats.hp;
+    this.baseCooldown = stats.role === 'hero' ? 500 : 700;
 
     const isHero = stats.role === 'hero';
     const isPlayer = team === 'player';

@@ -23,7 +23,7 @@ export class BattleSystem {
       const dist = attacker.distanceTo(target);
       if (dist <= attacker.stats.range) {
         target.takeDamage(attacker.stats.atk);
-        attacker.attackCooldown = 700;
+        attacker.attackCooldown = attacker.baseCooldown;
       }
     }
 

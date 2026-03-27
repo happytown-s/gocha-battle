@@ -80,9 +80,9 @@ export class BattleScene extends Phaser.Scene {
 
     const nerf = (c: CharacterMaster): CharacterMaster => ({
       ...c,
-      hp: Math.floor(c.hp * 0.6),
-      atk: Math.floor(c.atk * 0.65),
-      def: Math.floor(c.def * 0.6),
+      hp: Math.floor(c.hp * 0.9),
+      atk: Math.floor(c.atk * 0.85),
+      def: Math.floor(c.def * 0.8),
     });
 
     const cpuHeroes = CHARACTERS.filter((c) => c.role === 'hero').map(nerf);
